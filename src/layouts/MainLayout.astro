@@ -3,43 +3,58 @@
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- Inject the dynamic title -->
     <title>{title}</title>
-</head>
-<body>
-    <nav class="flex gap-1 bg-amber-100 p-4">
-        <a href="/">Home</a>
-        <a href="/projects">Projects</a>
+  </head>
+  <body>
+    <nav class="">
+      <div class="flex justify-between items-center">
+        <div class="bg-mauve-950 rounded-full">
+          <div class="flex items-center gap-3 p-2">
+            <img src="https://img.icons8.com/?size=100&id=R5ZG0w24Cf2G&format=png&color=000000" alt="site-logo" class="w-12 h-12 " />
+            <ul class="hidden md:flex gap-3 text-amber-50 p-3 bg-mauve-900 rounded-full">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/work">Works</a></li>
+            </ul>     
+          </div>  
+        </div>
+
+        <div class="flex bg-mauve-950 rounded-full gap-2 items-center p-2.5">
+          <button class="bg-mauve-900 text-amber-50 rounded-3xl p-2">Contact Me</button> <span class="hidden md:block text-amber-50 rounded-full bg-mauve-900 p-2">→</span>
+          <img src="https://img.icons8.com/?size=100&id=36389&format=png&color=ffffff" alt="site-logo" class="ml-2 w-8 h-8 md:hidden" />
+        </div>
+      </div>
     </nav>
 
-    <slot/>
+    <slot />
 
-    <footer>
-        <p>&copy; 2026 Creative Portfolio. All rights reserved.</p>
-    </footer>
-</body>
+    <!-- <footer>
+      <p>&copy; 2026 Creative Portfolio. All rights reserved.</p>
+    </footer> -->
+  </body>
 </html>
 
 <style is:global>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 2rem;
-        background-color: #f4f4f4;
-    }
+  body {
+    font-family: 'Google Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    background-color: #f4f4f4;
+  }
 
-    footer {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 1rem;
-        margin-top: 2rem;
-    }
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
 </style>
