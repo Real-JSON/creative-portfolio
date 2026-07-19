@@ -1,0 +1,22 @@
+---
+import MainLayoutAstroComponent from "../layouts/MainLayout.astro"
+import ProjectCardAstroComponent from "../components/ProjectCard.astro"
+---
+<MainLayoutAstroComponent title="Projects">
+	<h1>My Projects</h1>
+	<p>Here are some of the projects I've worked on.</p>
+
+    <ProjectCardAstroComponent 
+        title="Project One" 
+        description="A brief description of Project One." 
+        imageUrl="/images/project-one.jpg" 
+        projectUrl="https://example.com/project-one"
+    />
+
+    <ProjectCardAstroComponent 
+        title="Project Two" 
+        description="A brief description of Project Two." 
+        imageUrl="/images/project-two.jpg" 
+        projectUrl="https://example.com/project-two"
+    />
+</MainLayoutAstroComponent>

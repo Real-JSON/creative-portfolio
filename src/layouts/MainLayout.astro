@@ -1,0 +1,45 @@
+---
+// src/layouts/MainLayout.astro
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Inject the dynamic title -->
+    <title>{title}</title>
+</head>
+<body>
+    <nav class="flex gap-1 bg-amber-100 p-4">
+        <a href="/">Home</a>
+        <a href="/projects">Projects</a>
+    </nav>
+
+    <slot/>
+
+    <footer>
+        <p>&copy; 2026 Creative Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+<style is:global>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background-color: #f4f4f4;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+</style>
