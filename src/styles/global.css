@@ -2,13 +2,16 @@
 @import "tailwindcss";
 
 @layer components {
+  nav {
+    @apply absolute w-full;
+  }
   /* Main navigation containers */
   .nav-container {
-    @apply flex justify-between items-center;
+    @apply flex justify-between items-center p-5;
   }
 
   .nav-group {
-    @apply bg-mauve-950 rounded-full;
+    @apply bg-mauve-100 rounded-full;
   }
 
   .nav-inner {
@@ -30,7 +33,7 @@
 
   /* Action Buttons (Contact Me) */
   .nav-actions {
-    @apply flex bg-mauve-950 rounded-full gap-2 items-center p-2.5;
+    @apply flex bg-mauve-100 rounded-full gap-2 items-center p-2.5;
   }
 
   .btn-contact {
