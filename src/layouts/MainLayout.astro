@@ -1,5 +1,6 @@
 ---
 // src/layouts/MainLayout.astro
+import "../styles/global.css";
 const { title } = Astro.props;
 ---
 
@@ -14,22 +15,35 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <nav class="">
-      <div class="flex justify-between items-center">
-        <div class="bg-mauve-950 rounded-full">
-          <div class="flex items-center gap-3 p-2">
-            <img src="https://img.icons8.com/?size=100&id=R5ZG0w24Cf2G&format=png&color=000000" alt="site-logo" class="w-12 h-12 " />
-            <ul class="hidden md:flex gap-3 text-amber-50 p-3 bg-mauve-900 rounded-full">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About Me</a></li>
-                <li><a href="/work">Works</a></li>
-            </ul>     
-          </div>  
+    <nav>
+      <div class="nav-container">
+        <!-- Left Side: Logo & Links -->
+        <div class="nav-group">
+          <div class="nav-inner">
+            <a href="/">
+              <img
+                src="https://img.icons8.com/?size=100&id=R5ZG0w24Cf2G&format=png&color=000000"
+                alt="site-logo"
+                class="nav-logo"
+              />
+            </a>
+            <ul class="nav-menu">
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Me</a></li>
+              <li><a href="/works">Works</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="flex bg-mauve-950 rounded-full gap-2 items-center p-2.5">
-          <button class="bg-mauve-900 text-amber-50 rounded-3xl p-2">Contact Me</button> <span class="hidden md:block text-amber-50 rounded-full bg-mauve-900 p-2">→</span>
-          <img src="https://img.icons8.com/?size=100&id=36389&format=png&color=ffffff" alt="site-logo" class="ml-2 w-8 h-8 md:hidden" />
+        <!-- Right Side: Contact Button & Mobile Icon -->
+        <div class="nav-actions">
+          <button class="btn-contact">Contact Me</button>
+          <span class="btn-arrow">→</span>
+          <img
+            src="https://img.icons8.com/?size=100&id=36389&format=png&color=ffffff"
+            alt="mobile-menu"
+            class="mobile-menu-btn"
+          />
         </div>
       </div>
     </nav>
@@ -44,7 +58,7 @@ const { title } = Astro.props;
 
 <style is:global>
   body {
-    font-family: 'Google Sans', Arial, sans-serif;
+    font-family: "Google Sans", Arial, sans-serif;
     margin: 0;
     padding: 2rem;
     background-color: #f4f4f4;

@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
+@import "tailwindcss";
+
+@layer components {
+  /* Main navigation containers */
+  .nav-container {
+    @apply flex justify-between items-center;
+  }
+
+  .nav-group {
+    @apply bg-mauve-950 rounded-full;
+  }
+
+  .nav-inner {
+    @apply flex items-center gap-3 p-2;
+  }
+
+  /* Logo and Links */
+  .nav-logo {
+    @apply w-12 h-12;
+  }
+
+  .nav-menu {
+    @apply hidden md:flex gap-3 text-amber-50 p-3 bg-mauve-900 rounded-full;
+  }
+
+  .nav-menu li a {
+    @apply hover:text-white transition-colors; /* Added a hover state as a bonus */
+  }
+
+  /* Action Buttons (Contact Me) */
+  .nav-actions {
+    @apply flex bg-mauve-950 rounded-full gap-2 items-center p-2.5;
+  }
+
+  .btn-contact {
+    @apply bg-mauve-900 text-amber-50 rounded-3xl p-2 cursor-pointer hover:bg-mauve-800 transition-colors;
+  }
+
+  .btn-arrow {
+    @apply hidden md:block text-amber-50 rounded-full bg-mauve-900 p-2;
+  }
+
+  .mobile-menu-btn {
+    @apply ml-2 w-8 h-8 md:hidden cursor-pointer;
+  }
+}
