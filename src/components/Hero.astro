@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import heroImage from "../assets/hero-image.png";
 import Marquee from "./Marquee.astro";
 ---
 
@@ -49,8 +51,8 @@ import Marquee from "./Marquee.astro";
       <div
         class="relative flex justify-center items-end w-full overflow-hidden z-10"
       >
-        <img
-          src="src/assets/hero-image.png"
+        <Image
+          src={heroImage}
           alt="Kasun Navodya"
           class="w-auto grayscale object-cover object-top max-h-95 sm:max-h-112.5 md:max-h-120 md:scale-150 lg:max-h-137.5 lg:scale-135"
         />
