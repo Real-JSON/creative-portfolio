@@ -1,3 +1,7 @@
+---
+import Marquee from "./Marquee.astro";
+---
+
 <section
   class="relative bg-[#1a1a1a] text-white min-h-screen w-full overflow-hidden flex flex-col justify-between -mt-25"
 >
@@ -10,7 +14,7 @@
   <!-- Header / Title Section -->
   <div class="relative z-10 pt-30 pb-6 text-center">
     <h1 class="text-xl md:text-2xl tracking-wider text-gray-300">Hello, I'm</h1>
-    <span class="text-[clamp(2rem,5vw,4rem)] font-bold block my-1"
+    <span class="text-[clamp(2rem,5vw,4rem)] font-bold block"
       >Kasun Navodya</span
     >
     <p class="text-gray-300 text-sm md:text-base">
@@ -48,7 +52,7 @@
         <img
           src="src/assets/hero-image.png"
           alt="Kasun Navodya"
-          class="w-auto grayscale object-cover object-top max-h-95 sm:max-h-112.5 md:max-h-120 md:scale-150 lg:max-h-137.5 lg:scale-125"
+          class="w-auto grayscale object-cover object-top max-h-95 sm:max-h-112.5 md:max-h-120 md:scale-150 lg:max-h-137.5 lg:scale-135"
         />
       </div>
 
@@ -75,3 +79,4 @@
     </div>
   </div>
 </section>
+<Marquee/>

@@ -1,0 +1,120 @@
+<div class="marquee-container">
+  <div class="marquee-content">
+    <!-- First set of items -->
+    <div class="marquee-item">
+      <span class="icon">✱</span>
+      <span class="text solid">Graphic Design</span>
+    </div>
+    <div class="marquee-item">
+      <span class="icon">✱</span>
+      <span class="text outline">Photography</span>
+    </div>
+    <div class="marquee-item">
+      <span class="icon">✱</span>
+      <span class="text solid">Product Design</span>
+    </div>
+    <div class="marquee-item">
+      <span class="icon">✱</span>
+      <span class="text outline">Videography</span>
+    </div>
+
+    <!-- Duplicate set for seamless infinite looping -->
+    <div class="marquee-item" aria-hidden="true">
+      <span class="icon">✱</span>
+      <span class="text solid">Graphic Design</span>
+    </div>
+    <div class="marquee-item" aria-hidden="true">
+      <span class="icon">✱</span>
+      <span class="text outline">Photography</span>
+    </div>
+    <div class="marquee-item" aria-hidden="true">
+      <span class="icon">✱</span>
+      <span class="text solid">Product Design</span>
+    </div>
+    <div class="marquee-item" aria-hidden="true">
+      <span class="icon">✱</span>
+      <span class="text outline">Videography</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Marquee Container */
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #181818; /* Dark background matching the image */
+    padding: clamp(1rem, 2vw, 2.5rem) 0;
+    white-space: nowrap;
+    display: flex;
+    user-select: none;
+  }
+
+  /* Marquee Animation Wrapper */
+  .marquee-content {
+    display: flex;
+    align-items: center;
+    /* gap: clamp(2rem, 4vw, 5rem); */
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    will-change: transform;
+  }
+
+  /* Pause animation on hover */
+  .marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+  }
+
+  /* Single Item Styling */
+  .marquee-item {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 4rem);
+    margin-right: clamp(2rem, 4vw, 5rem);
+  }
+
+  /* Asterisk Icon Styling */
+  .icon {
+    color: #ffffff;
+    font-size: clamp(1.2rem, 2.5vw, 2.8rem);
+    line-height: 1;
+    opacity: 0.9;
+  }
+
+  /* Text Base Styling */
+  .text {
+    font-size: clamp(2rem, 5vw, 5.5rem); /* Responsive fluid typography */
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+  }
+
+  /* Solid Text Style */
+  .text.solid {
+    color: #ffffff;
+  }
+
+  /* Outlined Text Style (Exact matching the image stroke) */
+  .text.outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px #ffffff;
+    opacity: 0.85;
+  }
+
+  /* Keyframes for Continuous Smooth Loop */
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Responsive adjustment for extra thin outlines on mobile screens */
+  @media (max-width: 600px) {
+    .text.outline {
+      -webkit-text-stroke: 1px #ffffff;
+    }
+  }
+</style>
