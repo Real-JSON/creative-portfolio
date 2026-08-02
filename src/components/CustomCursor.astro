@@ -57,7 +57,7 @@
     // Detect hover on interactive elements
     document.addEventListener('mouseover', (e) => {
       const target = e.target as HTMLElement | null;
-      if (target?.closest('a, button, input, textarea')) {
+      if (target?.closest('a, button, input, textarea, .navigation-icon')) {
         cursor.classList.add('hovered');
       }
     });
@@ -65,7 +65,7 @@
     // Remove hover on uninteractive elements
     document.addEventListener('mouseout', (e) => {
       const target = e.target as HTMLElement | null;
-      if (target?.closest('a, button, input, textarea, .hover-target')) {
+      if (target?.closest('a, button, input, textarea, .navigation-icon')) {
         cursor.classList.remove('hovered');
       }
     });
