@@ -1,5 +1,6 @@
 ---
 // src/layouts/MainLayout.astro
+import CustomCursor from "../components/CustomCursor.astro";
 import "../styles/global.css";
 const { title } = Astro.props;
 ---
@@ -15,6 +16,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <CustomCursor/>
     <nav>
       <div class="nav-container">
         <!-- Left Side: Logo & Links -->
