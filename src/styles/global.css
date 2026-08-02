@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 @import "tailwindcss";
 
+@theme {
+  --color-site-bg: #1a1a1a;
+  --color-nav-bg: #2e2e2e;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--color-site-bg);
+    font-family: "Google Sans", Arial, sans-serif;
+  }
+}
+
 @layer components {
   nav {
     @apply relative w-full z-50 bg-transparent; /* Normal flow, z-index high for dropdowns */
@@ -12,7 +27,7 @@
   }
 
   .nav-group {
-    @apply bg-[#2e2e2e] rounded-full p-1.5 shadow-sm;
+    @apply bg-nav-bg rounded-full p-1.5 shadow-sm;
   }
 
   .nav-inner {
