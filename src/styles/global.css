@@ -87,7 +87,7 @@
   }
 
   .services-header span {
-    @apply text-xs font-semibold tracking-widest text-white uppercase rounded-text-frame rounded-text-frame;
+    @apply text-xs font-semibold tracking-widest text-white uppercase rounded-text-frame;
   }
 
   .services-header h2 {
@@ -95,15 +95,15 @@
   }
 
   .services-header p {
-    @apply text-sm md:text-lg mt-2;
+    @apply text-sm md:text-base mt-2;
   }
 
   .service-card {
-    @apply flex flex-col gap-3 relative p-8 md:px-12 md:py-12 lg:px-20 lg:py-8;
+    @apply flex items-start gap-10 p-8 md:px-12 md:py-12 lg:px-20 lg:py-8;
   }
 
   .service-icon {
-    @apply w-full h-auto max-w-12;
+    @apply w-full h-auto max-w-12 mt-3;
   }
 
   .service-info {
@@ -113,11 +113,15 @@
     @apply text-2xl uppercase md:text-3xl mt-2;
   }
 
-  .service-info p {
-    @apply text-sm md:text-xl mt-2 md:w-[70%];
+  .service-card h3 {
+    @apply text-xl uppercase md:text-2xl mt-2;
+  }
+
+  .service-card p {
+    @apply text-xs md:text-sm mt-2 w-[80%] lg:w-[90%];
   }
 
   .navigation-icon {
-    @apply absolute top-0 right-0 m-8 rotate-45 md:m-12 lg:mx-20;
+    @apply rotate-45 shrink-0;
   }
 }
