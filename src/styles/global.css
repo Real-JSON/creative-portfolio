@@ -106,15 +106,12 @@
     @apply w-full h-auto max-w-12 mt-3;
   }
 
-  .service-info {
-  }
-
   .service-card h3 {
     @apply text-xl uppercase md:text-2xl mt-2;
   }
 
   .service-card p {
-    @apply text-xs md:text-sm mt-2 w-full;
+    @apply text-xs md:text-sm mt-2 w-[80%] lg:w-[90%];
   }
 
   .navigation-icon {
