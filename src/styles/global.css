@@ -83,7 +83,7 @@
   }
 
   .services-header {
-    @apply flex flex-col gap-3 p-8 md:p-12 lg:px-20;
+    @apply flex flex-col gap-3;
   }
 
   .services-header span {
@@ -109,16 +109,12 @@
   .service-info {
   }
 
-  .service-info h3 {
-    @apply text-2xl uppercase md:text-3xl mt-2;
-  }
-
   .service-card h3 {
     @apply text-xl uppercase md:text-2xl mt-2;
   }
 
   .service-card p {
-    @apply text-xs md:text-sm mt-2 w-[80%] lg:w-[90%];
+    @apply text-xs md:text-sm mt-2 w-full;
   }
 
   .navigation-icon {
