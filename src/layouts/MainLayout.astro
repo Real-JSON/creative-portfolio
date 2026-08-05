@@ -1,6 +1,7 @@
 ---
 // src/layouts/MainLayout.astro
 import CustomCursor from "../components/CustomCursor.astro";
+import ScrollToTop from "../components/ScrollToTop.astro";
 import "../styles/global.css";
 const { title } = Astro.props;
 ---
@@ -52,8 +53,7 @@ const { title } = Astro.props;
 
     <slot />
 
-    <!-- <footer>
-      <p>&copy; 2026 Creative Portfolio. All rights reserved.</p>
-    </footer> -->
+    <ScrollToTop/>
+
   </body>
 </html>
