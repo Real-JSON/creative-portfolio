@@ -1,4 +1,6 @@
 ---
+import SpotlightText from "./SpotlightText.astro";
+
 // You can pass dynamic data as props or keep it as-is
 const currentYear = new Date().getFullYear();
 ---
@@ -15,7 +17,7 @@ const currentYear = new Date().getFullYear();
       <div class="flex justify-between items-start gap-6">
         <div class="max-w-md space-y-4">
           <p class="font-bold text-sm tracking-wide">
-            Kasun &copy; {currentYear}
+            Kasun Navodya &copy; {currentYear}
           </p>
           <p
             class="text-xs md:text-sm text-neutral-700 leading-relaxed uppercase"
@@ -327,38 +329,9 @@ const currentYear = new Date().getFullYear();
       </a>
     </div>
   </div>
-
-  <!-- GIANT BRANDING TITLE -->
-  <div class="px-4 py-2 border-b-2 border-black overflow-hidden select-none">
-    <h1
-      class="text-[12vw] font-extrabold leading-none tracking-tighter whitespace-nowrap uppercase"
-    >
-      KAR&dash;SON
-    </h1>
-  </div>
-
-  <!-- CROPPED GRAPHIC BANNER SECTION -->
-  <div
-    class="relative w-full h-32 md:h-56 overflow-hidden border-b-2 border-black bg-site-bg/30 text-white flex items-center justify-between"
-  >
-    <!-- Huge Crop SVG Shape -->
-    <svg
-      class="w-full h-full fill-white"
-      viewBox="0 0 1000 200"
-      preserveAspectRatio="none"
-    >
-      <path d="M 0,200 C 150,0 350,0 450,200 L 350,200 C 280,70 150,70 80,200 Z"
-      ></path>
-      <path d="M 400,0 L 500,0 L 500,200 L 400,200 Z"></path>
-      <path
-        d="M 600,0 C 700,200 900,200 1000,0 L 900,0 C 820,130 720,130 650,0 Z"
-      ></path>
-    </svg>
-  </div>
-
   <!-- BOTTOM UTILITY FOOTER -->
   <div
-    class="px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-xs font-bold gap-2"
+    class="px-6 md:px-22 py-4 flex flex-col sm:flex-row justify-between items-center text-xs font-bold gap-2"
   >
     <div class="w-5 h-5">
       <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
@@ -367,7 +340,7 @@ const currentYear = new Date().getFullYear();
       </svg>
     </div>
     <p class="text-neutral-500">
-      <!-- Created by <span class="text-black">K-Studio 20-25</span> -->
+      Design & Developed by <span class="text-amber-50">JSON</span>
     </p>
   </div>
 </footer>
