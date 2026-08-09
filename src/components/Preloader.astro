@@ -1,0 +1,27 @@
+<div
+      id="preloader"
+      class="fixed inset-0 z-[9999] flex items-center justify-center bg-[#181818] transition-opacity duration-700"
+    >
+      <div
+        class="h-10 w-10 animate-spin rounded-full border-4 border-white/20 border-t-white"
+      >
+      </div>
+    </div>
+
+<script>
+      const hidePreloader = () => {
+        const preloader = document.getElementById("preloader");
+
+        if (!preloader) return;
+
+        preloader.classList.add("opacity-0", "pointer-events-none");
+
+        setTimeout(() => {
+          preloader.remove();
+        }, 700);
+      };
+
+      window.addEventListener("load", hidePreloader);
+
+      document.addEventListener("astro:page-load", hidePreloader);
+    </script>
