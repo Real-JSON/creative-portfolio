@@ -1,6 +1,4 @@
 ---
-import { ClientRouter } from "astro:transitions";
-
 // src/layouts/MainLayout.astro
 import CustomCursor from "../components/CustomCursor.astro";
 import ScrollToTop from "../components/ScrollToTop.astro";
@@ -21,13 +19,9 @@ const { title } = Astro.props;
 
     <!-- Inject the dynamic title -->
     <title>{title}</title>
-
-    <ClientRouter />
   </head>
+  
   <body>
-
-    <Preloader/>
-
     <CustomCursor />
     <nav>
       <div class="nav-container">
