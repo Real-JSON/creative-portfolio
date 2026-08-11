@@ -26,52 +26,7 @@
 }
 
 @layer components {
-  nav {
-    @apply relative w-full z-50 bg-transparent; /* Normal flow, z-index high for dropdowns */
-  }
-
-  /* Keep your existing pill styles */
-  .nav-container {
-    @apply flex justify-between items-center px-8 py-6 max-w-7xl mx-auto;
-  }
-
-  .nav-group {
-    @apply bg-nav-bg rounded-full p-1.5 shadow-sm;
-  }
-
-  .nav-inner {
-    @apply flex items-center gap-2;
-  }
-
-  /* Logo and Links */
-  .nav-logo {
-    @apply w-10 h-10 rounded-full object-cover;
-  }
-
-  .nav-menu {
-    @apply hidden md:flex items-center gap-4 text-white px-5 py-2.5 bg-mauve-950 rounded-full text-sm font-medium;
-  }
-
-  .nav-menu li a {
-    @apply hover:text-mauve-300 transition-colors ease-in-out;
-  }
-
-  /* Action Buttons (Right Side) */
-  .nav-actions {
-    @apply flex bg-nav-bg backdrop-blur-md rounded-full items-center p-1.5 shadow-sm gap-2;
-  }
-
-  .btn-contact {
-    @apply bg-mauve-950 text-white font-medium text-sm rounded-full px-5 py-2.5 cursor-pointer hover:bg-site-bg transition-colors ease-in-out;
-  }
-
-  .btn-arrow {
-    @apply hidden md:flex items-center justify-center text-white rounded-full bg-mauve-950 w-9 h-9 text-sm;
-  }
-
-  .mobile-menu-btn {
-    @apply ml-1 w-7 h-7 md:hidden cursor-pointer;
-  }
+  
 
   /* Service Section */
   .services {
