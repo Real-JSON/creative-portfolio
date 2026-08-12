@@ -1,22 +1,8 @@
 ---
 import MainLayoutAstroComponent from "../layouts/MainLayout.astro"
 import ProjectCardAstroComponent from "../components/ProjectCard.astro"
+import AboutMe from "../components/AboutMe.astro"
 ---
 <MainLayoutAstroComponent title="About Me">
-	<h1>About Me</h1>
-	<p>Here are some details about me.</p>
-
-    <ProjectCardAstroComponent 
-        title="Project One" 
-        description="A brief description of Project One." 
-        imageUrl="/images/project-one.jpg" 
-        projectUrl="https://example.com/project-one"
-    />
-
-    <ProjectCardAstroComponent 
-        title="Project Two" 
-        description="A brief description of Project Two." 
-        imageUrl="/images/project-two.jpg" 
-        projectUrl="https://example.com/project-two"
-    />
+    <AboutMe/>
 </MainLayoutAstroComponent>
