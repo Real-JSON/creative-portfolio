@@ -1,13 +1,15 @@
 ---
 // src/layouts/MainLayout.astro
-import CustomCursor from "../components/CustomCursor.astro";
-import ScrollToTop from "../components/ScrollToTop.astro";
-import Contact from "../components/Contact.astro";
+
+import Contact from "../components/global/Contact.astro";
+import CustomCursor from "../components/global/CustomCursor.astro";
+import Footer from "../components/global/Footer.astro";
+import Navbar from "../components/global/Navbar.astro";
+import ScrollToTop from "../components/global/ScrollToTop.astro";
 import Preloader from "../components/Preloader.astro";
 
 import "../styles/global.css";
-import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
+
 const { title } = Astro.props;
 ---
 

@@ -1,13 +1,14 @@
 ---
 import MainLayoutAstroComponent from "../layouts/MainLayout.astro"
-import HeroAstroComponent from "../components/Hero.astro"
-import Services from "../components/Services.astro"
-import ProjectsGrid from "../components/ProjectsGrid.astro"
-import ToolsMarquee from "../components/ToolsMarquee.astro"
+import Services from "../components/home/Services.astro"
+import ProjectsGrid from "../components/home/ProjectsGrid.astro"
+import ToolsMarquee from "../components/home/ToolsMarquee.astro"
+import Hero from "../components/home/Hero.astro"
+
 ---
 
 <MainLayoutAstroComponent title="Creative Portfolio">
-	<HeroAstroComponent/>
+	<Hero/>
 	<Services/>
 	<ProjectsGrid/>
 	<ToolsMarquee/>
