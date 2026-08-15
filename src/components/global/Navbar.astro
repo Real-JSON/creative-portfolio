@@ -1,5 +1,7 @@
 <nav class="sticky top-0 z-999 backdrop-blur-sm">
-  <div class="nav-container flex items-center max-w-350 mx-auto px-8 py-4 md:px-12 md:py-6">
+  <div
+    class="nav-container flex items-center max-w-350 mx-auto px-8 py-4 md:px-12 md:py-6"
+  >
     <div class="site-logo mr-auto">
       <a href="/">
         <img
@@ -12,12 +14,31 @@
 
     <div class="nav-links-desktop hidden ml-10 md:flex items-center w-full">
       <ul class="nav-menu flex gap-8 border rounded-full px-2 py-1">
-        <li><a href="/" class="hover:bg-amber-50 hover:text-black rounded-full px-2 transition-colors ease-out duration-300">Home</a></li>
-        <li><a href="/about" class="hover:bg-amber-50 hover:text-black rounded-full px-2 transition-colors ease-out duration-300">About Me</a></li>
-        <li><a href="/works" class="hover:bg-amber-50 hover:text-black rounded-full px-2 transition-colors ease-out duration-300">Works</a></li>
+        <li>
+          <a
+            href="/"
+            class="hover:bg-amber-50 hover:text-black rounded-full px-2 transition-colors ease-out duration-300"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="/about"
+            class="hover:bg-amber-50 hover:text-black rounded-full px-2 transition-colors ease-out duration-300"
+            >About Me</a
+          >
+        </li>
+        <li>
+          <a
+            href="/works"
+            class="hover:bg-amber-50 hover:text-black rounded-full px-2 transition-colors ease-out duration-300"
+            >Works</a
+          >
+        </li>
       </ul>
 
-      <button class="cta-button hidden md:flex items-center gap-2 ml-auto border rounded-full px-4 py-1 hover:bg-amber-50 hover:text-black transition-colors ease-out duration-300"
+      <button
+        class="cta-button hidden md:flex items-center gap-2 ml-auto border rounded-full px-4 py-1 hover:bg-amber-50 hover:text-black transition-colors ease-out duration-300"
         >Start Project
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -35,8 +56,10 @@
       </button>
     </div>
 
+    <!-- Mobile Menu -->
     <div>
-      <div class="md:hidden ml-auto">
+      <!-- Hamburger Icon -->
+      <div class="hamburger-menu md:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -51,16 +74,17 @@
         </svg>
       </div>
 
+      <!-- Menu Container -->
       <div
-        class="nav-links-mobile hidden absolute bg-white text-black top-0 left-0 w-screen h-screen px-10"
+        class="nav-links-mobile hidden absolute bg-white text-black top-0 left-0 z-999 w-screen h-screen px-10"
       >
-        <div>
+        <div class="close-btn absolute top-8 right-8 z-999">
+          <!-- Close Icon -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"
             height="32"
             viewBox="0 0 24 24"
-            class="absolute top-8 right-8"
           >
             <path d="M0 0h24v24H0z" fill="none"></path>
             <path
@@ -76,34 +100,62 @@
                 fill="freeze"
                 attributeName="stroke-dashoffset"
                 dur="0.4s"
-                values="12;0"></animate>
+                values="12;0">
+              </animate>
             </path>
           </svg>
         </div>
-        <ul class="text-5xl font-semibold mt-30 flex flex-col gap-4">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Me</a></li>
-          <li><a href="/works">Works</a></li>
-        </ul>
 
-        <button
-          class="flex items-center gap-3 mt-5 text-2xl font-semibold border rounded-full px-3 py-1 bg-black text-white"
-          >Start Project
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            class="navigation-icon"
-          >
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path
-              fill="currentColor"
-              d="M11 20V7.75L5.75 13L5 12.34l6.5-6.5l6.5 6.5l-.75.66L12 7.75V20z"
-            ></path>
-          </svg>
-        </button>
+        <!-- Navigation Links -->
+        <div class="flex flex-col justify-center h-full">
+          <ul class="text-4xl font-semibold flex flex-col items-center gap-4">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Me</a></li>
+            <li><a href="/works">Works</a></li>
+          </ul>
+
+          <button
+            class="flex items-center gap-3 mt-10 text-xl font-semibold border rounded-full px-3 py-1 bg-black text-white mx-auto"
+            >Start Project
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              class="navigation-icon"
+            >
+              <path d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                fill="currentColor"
+                d="M11 20V7.75L5.75 13L5 12.34l6.5-6.5l6.5 6.5l-.75.66L12 7.75V20z"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </nav>
+
+<script type="module">
+  let menuIcon = document.querySelector(".hamburger-menu");
+  let menu = document.querySelector(".nav-links-mobile");
+  let closeIcon = document.querySelector(".close-btn");
+  let navLinks = document.querySelectorAll("ul > li > a");
+
+
+  menuIcon.addEventListener("click", openMenu);
+
+  closeIcon.addEventListener("click", closeMenu);
+
+  // navLinks.addEventListener("click", closeMenu);
+
+  function openMenu() {
+    menu.style.display = "block";
+  }
+
+  function closeMenu() {
+    menu.style.display = "none";
+  }
+
+</script>
