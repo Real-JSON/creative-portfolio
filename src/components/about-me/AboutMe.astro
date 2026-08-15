@@ -2,18 +2,33 @@
 import Experience from "./Experience.astro";
 ---
 
-<header class="">
-  <div class="flex flex-col gap-8 py-16 px-6 md:px-12 lg:px-20 md:justify-between md:flex-row">
-    <div>
-      <span>•</span> <span class="uppercase font-bold text-sm md:ml-5">About Me</span>
+<header class="py-16 md:py-24 px-6 md:px-12 lg:px-20">
+  <div
+    class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
+  >
+    <!-- Left Side -->
+    <div class="lg:col-span-6 flex flex-col">
+      <!-- Section Label -->
+      <div class="flex items-center gap-5">
+        <div class="circle bg-white rounded-full w-2 h-2"></div>
+        <span
+          class="text-xs md:text-sm tracking-widest text-neutral-500 uppercase"
+          >About Me</span
+        >
+      </div>
     </div>
 
-    <div class="md:w-3/5">
-      <h6 class="text-md md:text-2xl lg:text-3xl">
-        I’m a creative focused on filmmaking, photography, and design, with a strong interest in turning ideas into thoughtful and engaging visuals. I enjoy exploring different styles, experimenting with new concepts, and creating work that feels simple, expressive, and true to the idea behind it.
+    <!-- Right Side -->
+    <div class="lg:col-span-6">
+      <h6 class="text-md md:text-xl lg:text-2xl md:text-justify">
+        I’m a creative focused on filmmaking, photography, and design, with a
+        strong interest in turning ideas into thoughtful and engaging visuals. I
+        enjoy exploring different styles, experimenting with new concepts, and
+        creating work that feels simple, expressive, and true to the idea behind
+        it.
       </h6>
     </div>
   </div>
 </header>
 
-<Experience/>
+<Experience />
