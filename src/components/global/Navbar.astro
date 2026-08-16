@@ -76,7 +76,7 @@
 
       <!-- Menu Container -->
       <div
-        class="nav-links-mobile hidden absolute bg-white text-black top-0 left-0 z-999 w-screen h-screen px-10"
+        class="nav-links-mobile invisible opacity-0 scale-95 pointer-events-none absolute bg-white text-black top-0 left-0 z-999 w-screen h-screen px-10 transition-all duration-300 ease-out"
       >
         <div class="close-btn absolute top-8 right-8 z-999">
           <!-- Close Icon -->
@@ -100,7 +100,8 @@
                 fill="freeze"
                 attributeName="stroke-dashoffset"
                 dur="0.4s"
-                values="12;0">
+                values="12;0"
+              >
               </animate>
             </path>
           </svg>
@@ -138,24 +139,43 @@
 </nav>
 
 <script type="module">
-  let menuIcon = document.querySelector(".hamburger-menu");
+  let open = document.querySelector(".hamburger-menu");
   let menu = document.querySelector(".nav-links-mobile");
-  let closeIcon = document.querySelector(".close-btn");
-  let navLinks = document.querySelectorAll("ul > li > a");
+  let close = document.querySelector(".close-btn");
 
+  open.addEventListener("click", openMenu);
 
-  menuIcon.addEventListener("click", openMenu);
-
-  closeIcon.addEventListener("click", closeMenu);
-
-  // navLinks.addEventListener("click", closeMenu);
+  close.addEventListener("click", closeMenu);
 
   function openMenu() {
-    menu.style.display = "block";
+    menu.classList.remove(
+      "invisible",
+      "opacity-0",
+      "scale-95",
+      "pointer-events-none",
+    );
+
+    menu.classList.add(
+      "visible",
+      "opacity-100",
+      "scale-100",
+      "pointer-events-auto",
+    );
   }
 
   function closeMenu() {
-    menu.style.display = "none";
-  }
+    menu.classList.remove(
+      "visible",
+      "opacity-100",
+      "scale-100",
+      "pointer-events-auto",
+    );
 
+    menu.classList.add(
+      "invisible",
+      "opacity-0",
+      "scale-95",
+      "pointer-events-none",
+    );
+  }
 </script>
